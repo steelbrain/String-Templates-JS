@@ -4,10 +4,10 @@
   "description": "String creation and templating helpers",
   "main": "lib/main.js",
   "scripts": {
-    "compile": "rollup src/main.js | babel --plugins transform-es2015-modules-commonjs -- > lib/main.js"
+    "compile": "rollup src/main.js | babel --presets steelbrain -- > lib/main.js"
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0"
+    "babel-preset-steelbrain": "^1.0.0"
   },
   "repository": {
     "type": "git",
