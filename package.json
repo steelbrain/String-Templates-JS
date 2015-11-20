@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "String creation and templating helpers",
   "main": "lib/main.js",
+  "jsnext:main": "src/main.js",
   "scripts": {
     "compile": "rollup src/main.js | babel --presets steelbrain -- > lib/main.js"
   },
