@@ -1,6 +1,6 @@
 {
   "name": "string-templates",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "String creation and templating helpers",
   "main": "lib/main.js",
   "scripts": {
