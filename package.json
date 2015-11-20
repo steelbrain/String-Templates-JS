@@ -4,7 +4,10 @@
   "description": "String creation and templating helpers",
   "main": "lib/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "rollup src/main.js | babel --plugins transform-es2015-modules-commonjs -- > lib/main.js"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0"
   },
   "repository": {
     "type": "git",
