@@ -1,7 +1,9 @@
 'use babel'
 
+export const DEFAULT = ['{', '}']
+
 export class Template {
-  constructor (wrappers = ['{', '}']) {
+  constructor (wrappers = DEFAULT) {
     this.wrappers = wrappers
   }
   render(template, parameters = {}) {
@@ -25,7 +27,7 @@ export class Template {
       }
     })
   }
-  create(wrappers) {
+  static create(wrappers = DEFAULT) {
     return new Template(wrappers)
   }
 }
