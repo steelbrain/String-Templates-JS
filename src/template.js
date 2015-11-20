@@ -7,7 +7,7 @@ export class Template {
     this.wrappers = wrappers
   }
   render(template, parameters = {}) {
-    return String(template).replace(`/\\${this.wrappers[0]}([\w\.]+)${this.wrappers[1]}\\/`, function(matches) {
+    return String(template).replace(new RegExp(`\\${this.wrappers[0]}([\\S]+)\\${this.wrappers[1]}`, 'g'), function(matches) {
       const match = matches[1]
       if (match.indexOf('.') === -1) {
         if (parameters.hasOwnProperty(match)) {
