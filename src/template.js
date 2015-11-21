@@ -7,12 +7,11 @@ export class Template {
     this.wrappers = wrappers
   }
   render(template, parameters = {}) {
-    return String(template).replace(new RegExp(`\\${this.wrappers[0]}([\\S]+)\\${this.wrappers[1]}`, 'g'), function(matches) {
-      const match = matches[1]
+    return String(template).replace(new RegExp(`\\${this.wrappers[0]}([\\S]+)\\${this.wrappers[1]}`, 'g'), function(orig, match) {
       if (match.indexOf('.') === -1) {
         if (parameters.hasOwnProperty(match)) {
           return parameters[match]
-        } else return matches[0]
+        } else return orig
       } else {
         let subject = parameters
         match.split('.').forEach(function(chunk) {
