@@ -1,6 +1,6 @@
 {
   "name": "string-templates",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "String creation and templating helpers",
   "main": "lib/main.js",
   "jsnext:main": "src/main.js",
