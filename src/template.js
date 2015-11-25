@@ -16,7 +16,7 @@ export class Template {
         let subject = parameters
         match.split('.').forEach(function(chunk) {
           if (subject.hasOwnProperty(chunk)) {
-            return subject[chunk]
+            subject = subject[chunk]
           } else return ''
         })
         if (typeof subject === 'object' && subject) {
