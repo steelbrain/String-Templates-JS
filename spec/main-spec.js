@@ -18,6 +18,19 @@ describe('String Templates', function() {
         first: {second: {third: {forth: 'fifth'}}}
       })).toBe('Hey There fifth')
     })
+
+    it('replaces keeps non-found as is', function() {
+      const template = new Template()
+      expect(template.render('Hey {come.on}', {})).toBe('Hey {come.on}')
+    })
+
+    it('supports substrings', function() {
+      const template = new Template()
+      expect(template.render('Hey {come.on:1}', {come: {on: 'Wow'}})).toBe('Hey ow')
+      expect(template.render('Hey {come.on:1:2}', {come: {on: 'Wow'}})).toBe('Hey o')
+      expect(template.render('Hey {come.on:1:3}', {come: {on: 'Wow'}})).toBe('Hey ow')
+      expect(template.render('Hey {come.on:2}', {come: {on: 'Wow'}})).toBe('Hey w')
+    })
   })
 
 })
