@@ -1,6 +1,8 @@
 String-Templates-JS
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/steelbrain/String-Templates-JS.svg)](https://greenkeeper.io/)
+
 String-Templates-JS is the JS port of my String-Templates module. It's lightweight and usable almost everywhere.
 
 #### API
