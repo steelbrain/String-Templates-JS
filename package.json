@@ -8,7 +8,7 @@
     "compile": "rollup src/main.js | babel --presets steelbrain -- > lib/main.js"
   },
   "devDependencies": {
-    "babel-preset-steelbrain": "^1.0.0"
+    "babel-preset-steelbrain": "^5.0.2"
   },
   "repository": {
     "type": "git",
